@@ -1,6 +1,6 @@
-# 网络安全实践课 66 组程库
+# SDU_Crypto_Homework_Group_66 
 
-# 杜威完成的任务如下所示：
+@ 杜威完成的任务如下所示：
 
 *Project1: implement the naïve birthday attack of reduced SM3
 
