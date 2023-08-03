@@ -93,6 +93,7 @@
 
 *Project17：Imple Google Password concept 
 
+
    ** 实现的操作:
            处理数据信息：对data_records中的用户名和密码进行哈希，并生成对应的key-value表和分割的集合。
            用户名和密码检查：当用户输入用户名和密码时，客户端计算其哈希值，并生成临时密钥sk。然后计算key和value。
