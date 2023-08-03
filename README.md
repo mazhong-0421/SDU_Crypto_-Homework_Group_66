@@ -93,30 +93,30 @@
 
 *Project17：Imple Google Password concept 
 
-** 实现的操作:
-        处理数据信息：对data_records中的用户名和密码进行哈希，并生成对应的key-value表和分割的集合。
-        用户名和密码检查：当用户输入用户名和密码时，客户端计算其哈希值，并生成临时密钥sk。然后计算key和value。
-        查找数据集：根据key在分割的集合中找到对应的数据集。
-        用户名和密码检测：计算h^ab和h^b，并检查h^b是否存在于数据集中。
-** 实现步骤:
-        创建一个data_records字典，存放用户名和密码的哈希值。
-        生成服务器的私密参数b。
-        处理数据信息：对data_records中的用户名和密码进行哈希，生成key-value表和分割的集合。
-        客户端输入用户名和密码，生成临时密钥sk，计算key和value。
-        查找数据集：根据key在分割的集合中找到对应的数据集。
-        计算h^ab和h^a，并检查h^b是否存在于数据集中。
-        输出结果，告知用户用户名和密码是否存在于已泄露的数据库中。
-** 结果分析: 
-        设置要验证的用户名和密码，例如 username = "user1" 和 password = "password1"。
-        调用 check_username_password(username, password) 函数，传入用户名和密码进行验证。
-        返回值为 True，即用户名和密码存在于已泄露的数据库中，则输出 "用户名和密码存在于已泄露的数据库中。"。
+   ** 实现的操作:
+           处理数据信息：对data_records中的用户名和密码进行哈希，并生成对应的key-value表和分割的集合。
+           用户名和密码检查：当用户输入用户名和密码时，客户端计算其哈希值，并生成临时密钥sk。然后计算key和value。
+           查找数据集：根据key在分割的集合中找到对应的数据集。
+           用户名和密码检测：计算h^ab和h^b，并检查h^b是否存在于数据集中。
+   ** 实现步骤:
+           创建一个data_records字典，存放用户名和密码的哈希值。
+           生成服务器的私密参数b。
+           处理数据信息：对data_records中的用户名和密码进行哈希，生成key-value表和分割的集合。
+           客户端输入用户名和密码，生成临时密钥sk，计算key和value。
+           查找数据集：根据key在分割的集合中找到对应的数据集。
+           计算h^ab和h^a，并检查h^b是否存在于数据集中。
+           输出结果，告知用户用户名和密码是否存在于已泄露的数据库中。
+   ** 结果分析: 
+           设置要验证的用户名和密码，例如 username = "user1" 和 password = "password1"。
+           调用 check_username_password(username, password) 函数，传入用户名和密码进行验证。
+           返回值为 True，即用户名和密码存在于已泄露的数据库中，则输出 "用户名和密码存在于已泄露的数据库中。"。
 
  *Project20: ECMH PoC
  
      该实验与project 13 重复，不再赘述
 
      
-    李旷达完成的任务如下：
+李旷达完成的任务如下：
         *Project4: do your best to optimize SM3 implementation (software)
         *Project11: impl sm2 with RFC6979
         *Project19: forge a signature to pretend that you are Satoshi
