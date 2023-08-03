@@ -1,6 +1,9 @@
-# SDU_Crypto_-Homework_Group_66    这是网络安全实践课 66 的组程库. 组员：杜威 杨昊 李旷达
-杜威完成的任务如下所示：
+# Homework_Group_66    网安实践课66组程库.组员：杜威 杨昊 李旷达
+
+# 杜威完成的任务如下所示：
+
 *Project1: implement the naïve birthday attack of reduced SM3
+
     ** 在实现生日攻击之前，我们需要进行以下几个操作：
             生成随机消息：使用Python的secrets模块和string模块生成随机的ASCII消息。
             计算哈希值：使用gmssl库中的sm3哈希函数计算消息的哈希值。
@@ -22,6 +25,7 @@
 
             
 *Project2: implement the Rho method of reduced SM3
+
     ** 在实现Rho攻击之前，我们需要进行以下几个操作：
             生成随机消息：使用secrets模块和string模块生成随机的ASCII消息。
             计算哈希值：使用gmssl库中的sm3哈希函数计算消息的哈希值。
@@ -38,6 +42,7 @@
 
 
  *Project5: Impl Merkle Tree following RFC6962
+ 
      ** Merkle Tree实现的操作如下：
     	    构建Merkle Tree：根据数据块构建Merkle Tree的树状结构。这个过程通常需要对数据块进行哈希计算，并逐层构建树节点。
     	    验证数据完整性：通过计算根哈希并与预期的根哈希进行比较，验证数据集的完整性。
@@ -55,6 +60,7 @@
 
 
  *Project9: AES software implementation
+ 
     ** OFB工作模式:我们在实现过程中加入了OFB工作模式， OFB（Output Feedback）是一种AES工作模式。
             它将前一个加密块的输出作为输入来加密下一个块，并使用一个初始化向量（IV）来启动加密过程。
             它以流密码的方式产生密钥流，然后将密钥流与明文进行异或操作以生成密文。    
@@ -69,6 +75,7 @@
     
 
 *Project13: Implement the above ECMH scheme
+
     ** ECMH方案支持以下操作：	
     	验证数据：使用公钥验证多重集合中的数据和对应的签名是否有效。
     	合并多重集合：参与方可以将自己的多重集合与其他多重集合合并，生成一个新的多重集合。
@@ -85,6 +92,7 @@
     	最后，输出 Homomorphic property is verified. 表示同态性质验证通过，验证了该 ECMH 方案在合并多重集合时保持了同态性质。
 
 *Project17：Imple Google Password concept 
+
 ** 实现的操作:
         处理数据信息：对data_records中的用户名和密码进行哈希，并生成对应的key-value表和分割的集合。
         用户名和密码检查：当用户输入用户名和密码时，客户端计算其哈希值，并生成临时密钥sk。然后计算key和value。
@@ -104,7 +112,10 @@
         返回值为 True，即用户名和密码存在于已泄露的数据库中，则输出 "用户名和密码存在于已泄露的数据库中。"。
 
  *Project20: ECMH PoC
+ 
      该实验与project 13 重复，不再赘述
+
+     
     李旷达完成的任务如下：
         *Project4: do your best to optimize SM3 implementation (software)
         *Project11: impl sm2 with RFC6979
