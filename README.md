@@ -91,8 +91,11 @@
     	Combined Multiset Hash 是合并后的多重集合的哈希值，它是两个多重集合哈希值的加法运算结果，验证了合并操作的正确性。
     	最后，输出 Homomorphic property is verified. 表示同态性质验证通过，验证了该 ECMH 方案在合并多重集合时保持了同态性质。
 
-*Project17：Imple Google Password concept 
 
+
+
+
+*Project17：Imple Google Password concept 
 
    ** 实现的操作:
            处理数据信息：对data_records中的用户名和密码进行哈希，并生成对应的key-value表和分割的集合。
@@ -111,6 +114,10 @@
            设置要验证的用户名和密码，例如 username = "user1" 和 password = "password1"。
            调用 check_username_password(username, password) 函数，传入用户名和密码进行验证。
            返回值为 True，即用户名和密码存在于已泄露的数据库中，则输出 "用户名和密码存在于已泄露的数据库中。"。
+
+
+
+
 
  *Project20: ECMH PoC
  
