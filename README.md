@@ -123,10 +123,24 @@
 
      
 李旷达完成的任务如下：
-        *Project4: do your best to optimize SM3 implementation (software)
-        *Project11: impl sm2 with RFC6979
-        *Project19: forge a signature to pretend that you are Satoshi
-        *Project22: research report on MPT
+*Project4: do your best to optimize SM3 implementation (software)
+
+*Project11: impl sm2 with RFC6979
+   
+      complete submission是所有工作量的集合版，由于是分功能实现SM2相关的部件，所以进行的了分块的提交。 
+    首先对于SM体系下的椭圆曲线加解密体系，实现了一个ECC—class,椭圆曲线密码类（实现一般椭圆曲线的运算，不局限于SM2）。
+    对于SM2-class，则是调用了ECC—class作为底层运算部件，根据RFC6979协议标准实现。该方案进行了基础性的ECDH正确性测试，SM2密钥协商测试，SM2数字签名与验证测试，测试过程均在key-Enc-test文件中可运行。
+    最后main_part运行结果，可复现RFC6979，SM2文档中的示例结果（达到要求）
+    备注：若要完整运行测试代码还需安装gmssl（pip install gmssl）和pysmx（pip install snowland-smx）。
+
+*Project19: forge a signature to pretend that you are Satoshi
+       
+       关于Attack_process文件是进行攻击的具体实行，进行签名伪造，伪造自己的身份为Satoshi
+       而testing文件则是用于签名伪造结果的验证，检测攻击是否成功
+       而ECDSA.py文件则是一个通用的ECC椭圆曲线加密的模型代码
+       运行代码之前需要在pycharm中安装ecdsa与hashlib两个库文件进行调用，才能正常运行！
+
+*Project22: research report on MPT  
 
 杨昊（202100460134）：
 
