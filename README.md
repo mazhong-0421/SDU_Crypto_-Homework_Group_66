@@ -127,3 +127,32 @@
         *Project11: impl sm2 with RFC6979
         *Project19: forge a signature to pretend that you are Satoshi
         *Project22: research report on MPT
+
+杨昊（202100460134）：
+*Project15: implement sm2 2P sign with real network communication
+
+      可执行文件一并上传了。
+      过程：
+            利用Bouncy Castle提供的椭圆曲线基本方法和SM2相关参数封装了SM2的加密解密和签名验签，对应SM2.cs文件。
+            客户端和服务端则利用.NetFrameWork .NetCore自带的套接字实现。
+            1.服务端计算P1=di^(-1)*G并发送给客户端。
+            2.客户端收到P1，计算公钥P=d2^(-1)*P1-G
+            3.服务端发送的的消息是M，选取Z并计算e=Hash(Z||M)，生成k1并计算Q1=k1*G。发送Q1和e。
+            4.客户端计算Q2=k2*G，（x1,y1)=k3*Q1+Q2。生成签名r=x1+e(mod n)(r!=0)，计算s2=d2*k3(mod n)，s3=d2*(r+k2)(mod n)。发送r，s2，s3。
+            5.服务端计算s=(d1*k1)*s2+d1*s3-r(mod n)。根据s的结果输出最终签名(r,s)。
+      结果：
+            CPU 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz
+            加密或者解密的运行耗时均不足10ms。
+      
+*Project16: implement sm2 2P decrypt with real network communication
+      
+      可执行文件一并上传了。
+      过程：
+            利用Bouncy Castle提供的椭圆曲线基本方法和SM2相关参数封装了SM2的加密解密和签名验签，对应SM2.cs文件。
+            客户端和服务端则利用.NetFrameWork .NetCore自带的套接字实现。
+            1.客户端通过套接字向服务端发送自己生成的公钥。
+            2.服务端利用套接字接受公钥并用该公钥加密要传递的信息。
+            3.客户端收到密文，用自己公钥对应的私钥进行解密得到明文。
+      结果：
+            CPU 11th Gen Intel(R) Core(TM) i5-11300H @ 3.10GHz
+            加密或者解密的运行耗时均不足10ms。
