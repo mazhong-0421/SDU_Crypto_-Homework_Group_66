@@ -1,7 +1,7 @@
 *Project15: implement sm2 2P sign with real network communication
 202100460134
 
-如果不能（估计多半没有编译环境）编译C#源代码，请直接使用提供的EXE文件，该文件就是代码的生成可执行文件。
+如果不能（估计多半没有编译环境）编译C#源代码(codes.rar)，请直接使用提供的EXE文件(SM2_2P_Server/Client.rar)，该文件就是代码的生成可执行文件。
 理论上在Windows X64环境下可以独立运行（Linux也许可以，作者没有测试但被声明可以运行），直接打开EXE即可。
 
 操作流程：
